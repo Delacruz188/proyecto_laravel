@@ -95,17 +95,17 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
    
    Route::get('/welcome','SocioController@perfil' );
    
-   Route::match(array('GET','POST'),'/RegisAdmin','Auth\RegisterController@formulario');
-   Route::match(array('GET','POST'),'/RegisSave','Auth\RegisterController@register');
+   Route::match(array('GET','POST'),'/register_for_admin','Auth\RegisterController@formulario');
+   Route::match(array('GET','POST'),'/register_for_admin_save','Auth\RegisterController@register');
 
-   Route::get('/RegisUser',function (){
+   Route::get('/register_for_user',function (){
       return view('login.register');
    });
    
    
-   Route::get('/manage','Auth\LoginController@formulario')->name('login');
+   Route::get('/login','Auth\LoginController@formulario')->name('login');
    // Route::get('/','Auth\LoginController@formulario');
-   Route::post('/login','Auth\LoginController@login');
+   Route::post('/do_login','Auth\LoginController@login');
 
    Route::match(array('GET','POST'),'/test_vue','DemoController@prueba_vue');
    Route::post('/test_axios','DemoController@prueba_axios');

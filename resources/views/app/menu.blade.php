@@ -24,7 +24,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/car_wash/catalogos/producto/listado" class="nav-link">
+              <a href={{ action('ProductoController@listado') }} class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Productos</p>
               </a>
@@ -36,7 +36,7 @@
               </a>
             </li> --}}
             <li class="nav-item">
-              <a href="/car_wash/catalogos/personal/listado" class="nav-link">
+              <a href={{ action('PersonalController@listado') }} class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Personal</p>
               </a>
@@ -48,14 +48,21 @@
               </a>
             </li> --}}
             <li class="nav-item">
-              <a href="/car_wash/catalogos/socio/listado" class="nav-link">
+              <a href={{ action('SocioController@listado') }} class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Socios</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href={{ action('PagoController@ventanilla') }} class="nav-link">
+                {{-- <i class="far fa-circle nav-icon"></i> --}}
+                <i class="far fa-circle nav-icon"></i>
+                <p>Realizar Pago</p>
+              </a>
+            </li>
           </ul>
           <li class="nav-item">
-            <a href="/car_wash/buscador" class="nav-link">
+            <a href={{ action('BuscadorController@index') }} class="nav-link">
               {{-- <i class="far fa-circle nav-icon"></i> --}}
               <i class="fas fa-search"></i>
               <p>Buscador</p>

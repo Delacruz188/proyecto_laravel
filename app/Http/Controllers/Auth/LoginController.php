@@ -55,17 +55,17 @@ class LoginController extends Controller
     protected function redirectTo(){
         
         switch (auth()->user()->idrol) {
-            case 3:
-                return '/catalogos/tiporol/listado';
-
+            case 1:
+                
+                return '/catalogos/tiposervicio/listado';
             break;
             case 2:
                 return '/welcome';
                 
             break;
-            case 1:
-                
-                return '/catalogos/tiposervicio/listado';
+            case 3:
+                return '/catalogos/tiporol/listado';
+
             break;
         }
         

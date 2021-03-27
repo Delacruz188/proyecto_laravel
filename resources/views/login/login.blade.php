@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Log in</title>
+  <title>Car Wash De Carlos De la Cruz</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,12 +15,11 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <p>Car Wash El Washer</p>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
       @if($errors->any())
       <div class="alert alert-danger" role="alert">
         {{$errors->first()}}
@@ -44,26 +43,10 @@
             </div>
           </div>
         </div>
-        
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-          </div>
-          <!-- /.col -->
-        
+          <button type="submit" class="btn btn-success btn-block">Ingresar</button>
+          <a href="/car_wash/register_for_user" class="text-center btn btn-info btn-block">Registrarte</a>        
       </form>
-
-      
-
-
-      <p class="mb-0">
-        <a href="register.html" class="text-center">Register a new membership</a>
-      </p>
-    </div>
-    <!-- /.login-card-body -->
   </div>
 </div>
-
-
 </body>
 </html>

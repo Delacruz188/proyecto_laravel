@@ -24,7 +24,7 @@ Socios
             <th>foto</th>
           </tr>
           <tr v-for="elemento in lista">
-            <td><a :href="url_editar+'?idsocio='+elemento.idsocio">@{{elemento.nombre}}</a></td>
+            <td><a :href="url_editar+'?id_socio='+elemento.idsocio">@{{elemento.nombre}}</a></td>
             <td>@{{elemento.nombretiposocio}}</td>
             <td> <a :href="url_rentas+'?idsocio='+elemento.idsocio">rentas</a></td>
             <td>
