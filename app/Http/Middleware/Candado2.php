@@ -10,7 +10,6 @@ class Candado2
     public function handle($request, Closure $next,$permiso)
     {
     	
-        //1.-Obtener el idrol del usuario que visita la pagina
     	$idrol=Auth::user()->idrol;
     	$permiso=Permiso::where('clave',$permiso)->first();
     	$rolxpermiso=Rol_Permiso::where('idrol',$idrol)->where('idpermiso',$permiso->idpermiso)->first();

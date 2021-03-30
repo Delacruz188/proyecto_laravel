@@ -1,5 +1,5 @@
 
-@extends('app.Blanck')
+@extends('app.blank')
 @section('titulo')
 Socios
 @endsection

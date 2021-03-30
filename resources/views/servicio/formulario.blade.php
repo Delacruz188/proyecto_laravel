@@ -1,4 +1,4 @@
-@extends('app.Blanck')
+@extends('app.blank')
 @section('titulo')
 Registrar servicio
 @endsection
@@ -41,12 +41,12 @@ Registrar servicio
                 input-class="form-control"
                 format="yyyy-MM-dd"
                 :language="lenguaje"
-                v-model="fechareservacion"
-                NAME="fechareservacion"
+                v-model="fecha_atencion_final"
+                NAME="fecha_atencion_final"
                 ></vuejs-datepicker>
         </div>
         <div class="form-group">
-                <label>Quien registra?</label>
+                <label>Personal a cargo</label>
                 <select name="idpersonal" v-model="idpersonal" class="form-control"> 
                   <option v-for="personal in personales"  :value="personal.idpersonal">@{{personal.nombre}}</option>
                 </select>
@@ -80,7 +80,7 @@ Registrar servicio
         ,idtiposervicio:""
         ,idpersonal:""
         ,lenguaje:vdp_translation_es.js
-        ,fechareservacion:""
+        ,fecha_atencion_final:""
         
       }
       ,methods:{

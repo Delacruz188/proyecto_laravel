@@ -31,20 +31,20 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
    //administrador, socio, personaln rutas del buscador
 
 
-   // Route::get('/catalogos/tiporol/listado','TiporolController@listado');
-   // Route::match(array('GET','POST'),'/catalogos/Tiporol/formulario','TiporolController@formulario');
-   // Route::post('/catalogos/tiporol/save','TiporolController@save'); 
-   // Route::match(array('GET','POST'),'/catalogos/permiso/listado','PermisoController@listado');
-   // Route::match(array('GET','POST'),'/catalogos/permiso/formulario','PermisoController@formulario');
-   // Route::post('/catalogos/permiso/save','PermisoController@save');
+      // Route::get('/catalogos/tiporol/listado','TiporolController@listado');
+      // Route::match(array('GET','POST'),'/catalogos/Tiporol/formulario','TiporolController@formulario');
+      // Route::post('/catalogos/tiporol/save','TiporolController@save'); 
+      // Route::match(array('GET','POST'),'/catalogos/permiso/listado','PermisoController@listado');
+      // Route::match(array('GET','POST'),'/catalogos/permiso/formulario','PermisoController@formulario');
+      // Route::post('/catalogos/permiso/save','PermisoController@save');
 
-   // //administrador, personal rutas de sevicios y materiales
-   // Route::get('/catalogos/tiposervicio/listado','TiposervicioController@listado');
-   // Route::match(array('GET','POST'),'/catalogos/Tiposervicio/formulario','TiposervicioController@formulario');
-   // Route::post('/catalogos/tiposervicio/save','TiposervicioController@save'); 
-   // Route::match(array('GET','POST'),'/catalogos/materiaprima/listado','MateriaprimaController@listado');
-   // Route::match(array('GET','POST'),'/catalogos/materiaprima/formulario','MateriaprimaController@formulario');
-   // Route::post('/catalogos/materiaprima/save','MateriaprimaController@save');
+      // //administrador, personal rutas de sevicios y materiales
+      // Route::get('/catalogos/tiposervicio/listado','TiposervicioController@listado');
+      // Route::match(array('GET','POST'),'/catalogos/Tiposervicio/formulario','TiposervicioController@formulario');
+      // Route::post('/catalogos/tiposervicio/save','TiposervicioController@save'); 
+      // Route::match(array('GET','POST'),'/catalogos/materiaprima/listado','MateriaprimaController@listado');
+      // Route::match(array('GET','POST'),'/catalogos/materiaprima/formulario','MateriaprimaController@formulario');
+      // Route::post('/catalogos/materiaprima/save','MateriaprimaController@save');
 
 // }); 
 

@@ -28,8 +28,6 @@ class ServicioController extends Controller{
 	}
     
     public function save(Request $r){
-		dd($r);
-		
 		$datos=$r->all();
 		
 		$servicio=new Servicio();

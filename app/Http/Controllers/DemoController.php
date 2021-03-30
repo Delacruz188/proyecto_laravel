@@ -87,7 +87,7 @@ class DemoController extends Controller{
 	{
 		$datos= new \StdClass();
 		$datos->num_servicio='2487';
-		$datos->fecha_servicio='09 de Marzo';
+		$datos->fecha_servicio='29 de Marzo';
 		$datos->cliente='Carlos';
 		$datos->tipo_servicio='Premium';
 		$datos->total=200;

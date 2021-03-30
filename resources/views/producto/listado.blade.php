@@ -1,4 +1,4 @@
-@extends('app.Blanck')
+@extends('app.blank')
 @section('titulo')
 listado Productos
 @endsection

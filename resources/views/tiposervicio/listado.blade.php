@@ -1,4 +1,4 @@
-@extends('app.Blanck')
+@extends('app.blank')
 @section('titulo')
 Catalogo de Tipos de servicios
 @endsection

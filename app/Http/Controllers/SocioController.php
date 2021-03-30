@@ -36,15 +36,11 @@ class SocioController extends Controller{
 		$datos=array();
 		$datos=$r->all();
 
-
-
 		if($r->isMethod('post')){
-
 			$operacion='Agregar';
 			$socio=new Socio();
 		}
 		else{
-
 			$operacion='Editar';
 			$socio=Socio::find($datos['idsocio']);
 		}

@@ -23,7 +23,7 @@ class BuscadorController extends Controller{
 		
 		$servicio=new Servicio();
 		$servicio->fecharegistro=date('Y-m-d H:i:s');
-		$servicio->fechareservacion=$datos['fechareservacion'];
+		$servicio->fecha_atencion_final=$datos['fecha_atencion_final'];
 		$servicio->idsocio=$datos['idsocio'];
 		$servicio->idpersonal=$datos['idpersonal'];
 		$servicio->placa=$datos['placa'];
@@ -49,6 +49,7 @@ class BuscadorController extends Controller{
 							,'modelo'
 							,'anio'
 							,'servicio.precio'
+							,'servicio.idservicio'
 							,DB::Raw('tiposervicio.nombre as tiposervicio')
 							,DB::Raw('personal.nombre as personal')
 							,DB::Raw('tiposocio.nombre as tiposocio')

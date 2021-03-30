@@ -1,4 +1,4 @@
-@extends('app.Blanck')
+@extends('app.blank')
 @section('titulo')
   Pagos
 @endsection
@@ -26,14 +26,14 @@
           <input type="text" value="{{$servicio->tipo}}" readonly class="form-control">
         </div>
         <div class="col-md-4">
-          <label for="">Fecha atencion</label>
+          <label for="">Fecha atención</label>
           <input type="text" value="{{$servicio->fecha_atencion_inicial}}" readonly class="form-control">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-md-3">
-          <label for="">Estacin</label>
+          <label for="">Estación</label>
           <input type="text" value="{{$servicio->nomestacion}}" readonly class="form-control">
         </div>
         <div class="col-md-3">

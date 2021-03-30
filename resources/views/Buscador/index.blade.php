@@ -1,6 +1,6 @@
-@extends('app.Blanck')
+@extends('app.blank')
 @section('titulo')
-Buscador de socios
+Buscador de servicios realizados
 @endsection
 @section('contenido')
     <div class="container">
@@ -19,7 +19,7 @@ Buscador de socios
         <div v-if="registros.length!=0" class="col-md-12 col-xs-12 col-sm-12">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Busqueda Rapida</h3>
+              <h3 class="panel-title">Filtrado</h3>
             </div>
             <div class="panel-body">
               <div class="form-group">
@@ -47,6 +47,7 @@ Buscador de socios
           <table class="table">
             <tr>
               <th>Socio</th>
+              <th>ID del Servicio recibido</th>
               <th>Tipo de Socio</th>
               <th>Placa</th>
               <th>Precio</th>
@@ -60,6 +61,7 @@ Buscador de socios
             </tr>
             <tr v-for="elemento in registros_final">
               <td>@{{elemento.socio}}</td>
+              <td>@{{elemento.idservicio}}</td>
               <td>@{{elemento.tiposocio}}</td>
               <td>@{{elemento.placa}}</td>
               <td>@{{elemento.precio}}</td>
