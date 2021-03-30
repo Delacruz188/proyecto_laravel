@@ -50,15 +50,10 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
    Route::match(array('GET','POST'),'/buscador','BuscadorController@index');
 
-   //terceeeeeeeeeer parciaaaaaaaaaaaaal
-   Route::get('/catalogos/servicios/listar','ServicioController@listar');
+   Route::get('/catalogos/servicios/listado','ServicioController@listado');
    Route::match(array('GET','POST'),'/servicio/registro','BuscadorController@formulario');
    Route::post('/servicio/save','BuscadorController@save');
    Route::get('/dbup/fecha','DbUpController@fecha');
-   //terceeeeeeeeeer parciaaaaaaaaaaaaal 
- 
-
-
 
    Route::get('/catalogos/personal/listado','PersonalController@listado');
    Route::match(array('GET','POST'),'/catalogos/personal/formulario','PersonalController@formulario');
@@ -107,9 +102,9 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
    // Route::get('/','Auth\LoginController@formulario');
    Route::post('/do_login','Auth\LoginController@login');
 
-   Route::match(array('GET','POST'),'/test_vue','DemoController@prueba_vue');
+   Route::match(array('GET','POST'),'/calendario','DemoController@prueba_vue');
    Route::post('/test_axios','DemoController@prueba_axios');
-   Route::post('/test_insertar','DemoController@prueba_insertar');
+   Route::post('/test_insertar','DemoController@insertar_datos');
    
    Route::match(array('GET','POST'),'/prueba_bo','DemoController@prueba_bo');
    Route::get('/dbup/prueba_bo','DbUpController@servicio_bo');

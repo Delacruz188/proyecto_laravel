@@ -54,7 +54,7 @@ class BuscadorController extends Controller{
 							,DB::Raw('tiposocio.nombre as tiposocio')
 							,DB::Raw('socio.nombre as socio')
 							,\DB::Raw("DATE_FORMAT(fecharegistro, '%Y-%m-%d') as fecharegistro")
-							,\DB::Raw("DATE_FORMAT(fechareservacion, '%Y-%m-%d') as fechareservacion")
+							,\DB::Raw("DATE_FORMAT(fecha_atencion_final, '%Y-%m-%d') as fechareservacion")
 						)
 					->whereRaw("placa like '%".$context['criterio']."%' or personal.nombre like'%".$context['criterio']."%' or socio.nombre like'%".$context['criterio']."%'")
 					->get();

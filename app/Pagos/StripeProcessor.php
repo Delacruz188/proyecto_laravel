@@ -21,7 +21,7 @@ class StripeProcessor
         ApiRequestor::setHttpClient($curl);
         $this->objeto_stripe = new Stripe();
         $this->objeto_stripe->setVerifySslCerts(false);
-        $this->objeto_stripe->setApiKey('sk_test_51IXz2eKH7yCtaewSkTUKEFhd2QKrEfH6jYDjDe6UPA5jYDETeHx0QCpvJbHWaLmqgy23XXrwmOdyAhILbl69Fwo900JaEFuRz0');
+        $this->objeto_stripe->setApiKey('sk_test_51IaPa4D4ypF0DVYhBAqvUqVEQqowJegYdTJoXyzf7Ck0KNB18f6lkmoJ6lH9A0k7iVwnHwhwGJrm6aKYMq8OJfx800LKWuer8E');
     }
 
     public function crear_customer($objeto)

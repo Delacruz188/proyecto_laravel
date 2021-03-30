@@ -1,6 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
+
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Model\Servicio;
@@ -11,11 +12,11 @@ use App\Model\Socio;
 class ServicioController extends Controller{
 
 	
-	public function listar(){
+	public function listado(){
 		$servicio=Servicio::all();
 		$datos=array();
 		$datos['lista']=$servicio;
-		$datos['usuario']='Jennie kim';
+		$datos['usuario']='Carlos De la Cruz';
 		return view('servicio.listado')->with($datos);
 	}
 

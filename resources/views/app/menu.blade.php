@@ -41,12 +41,12 @@
                 <p>Personal</p>
               </a>
             </li>
-            {{-- <li class="nav-item">
-              <a href="../../index3.html" class="nav-link">
+            <li class="nav-item">
+              <a href={{ action('TiposervicioController@listado') }} class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Tipos de servicios</p>
               </a>
-            </li> --}}
+            </li>
             <li class="nav-item">
               <a href={{ action('SocioController@listado') }} class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -54,8 +54,19 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href={{ action('TiporolController@listado') }} class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Roles</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href={{ action('DemoController@prueba_vue') }} class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Calendario</p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href={{ action('PagoController@ventanilla') }} class="nav-link">
-                {{-- <i class="far fa-circle nav-icon"></i> --}}
                 <i class="far fa-circle nav-icon"></i>
                 <p>Realizar Pago</p>
               </a>
@@ -63,7 +74,6 @@
           </ul>
           <li class="nav-item">
             <a href={{ action('BuscadorController@index') }} class="nav-link">
-              {{-- <i class="far fa-circle nav-icon"></i> --}}
               <i class="fas fa-search"></i>
               <p>Buscador</p>
             </a>

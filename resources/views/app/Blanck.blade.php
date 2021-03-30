@@ -26,7 +26,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
+    <a style="color: aliceblue" class="brand-link">
       <img src="https://media.istockphoto.com/vectors/car-wash-service-logo-stock-vector-vector-id1090457308?b=1&k=6&m=1090457308&s=612x612&w=0&h=CEQgQgPXM9cSek3iJgnTa_jbIX8NU5f9o3MULHZ01o4="
            alt="AdminLTE Logo"
            class="brand-image img-circle elevation-3"

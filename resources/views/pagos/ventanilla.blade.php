@@ -66,7 +66,7 @@
   <script src="https://js.stripe.com/v2/"></script>
   
   <script>
-  var llave_publica='pk_test_51IXz2eKH7yCtaewSRTGbbjbaUGmEhmkMgWtR9JvD4NHJ5FtSknvSvTnEJkxU06QnHsTsWIHlRCnG0nBJyjqp1AYt00g2QgvVQO';
+  var llave_publica='pk_test_51IaPa4D4ypF0DVYh45kxPeiDogipfZsM8JmqkzseaUnXr25lmHK6UiQekxW9Sa5s4kR2bAtDkEzvV4k7HQTIYbm000hmsdDwo6';
   var servicio={{$idservicio}};
   var laravel_token='{{csrf_token()}}';
   var url_pago='{{action('PagoController@realizar_pago')}}'

@@ -1,6 +1,6 @@
 @extends('app.Blanck')
 @section('titulo')
-Buscador
+Buscador de socios
 @endsection
 @section('contenido')
     <div class="container">
@@ -9,10 +9,9 @@ Buscador
           <form action="{{action('BuscadorController@index')}}" method="POST">
             {{csrf_field()}}
             <div class="form-group">
-              <label>buscar</label>
-              <input type="text" name="criterio" value="{{$criterio}}" placeholder="escribir nombre del socio, nombre del empleado o numero de placa" class="form-control"></input>
+              <input type="text" name="criterio" value="{{$criterio}}" placeholder="Puedes introducir: nombre del socio, nombre del empleado o numero de placa" class="form-control"></input>
             </div>
-            <button class="btn btn-success">buscar</button>
+            <button class="btn btn-success">Buscar</button>
           </form>
         </div>
       </div>
@@ -26,19 +25,19 @@ Buscador
               <div class="form-group">
                 <labe>Tipo de servicio</label>
                 <select class="form-control" v-model="filtro_tipo"> 
-                  <option v-for="tip in tipos" :value="tip">@{{tip}}</option>
+                  <option v-for="tipo in tipos" :value="tipo">@{{tipo}}</option>
                 </select>
               </div>
               <div class="form-group">
                 <labe>Modelo</label>
                 <select class="form-control" v-model="filtro_modelo"> 
-                  <option v-for="mod in modelos" :value="mod">@{{mod}}</option>
+                  <option v-for="modelo in modelos" :value="modelo">@{{modelo}}</option>
                 </select>
               </div>
               <div class="form-group">
                 <labe>Tipo de socio</label>
                 <select class="form-control" v-model="filtro_socio"> 
-                  <option v-for="ti in tipsocio" :value="ti">@{{ti}}</option>
+                  <option v-for="tiposoc in tipsocio" :value="tiposoc">@{{tiposoc}}</option>
                 </select>
               </div>
             </div>
@@ -47,27 +46,29 @@ Buscador
           <h1>Resultados de Busqueda</h1>
           <table class="table">
             <tr>
-              <th>socio</th>
-              <th>socio</th>
-              <th>placa</th>
-              <th>modelo / año</th>
-              <th>precio</th>
-              <th>tipo de servicio</th>
-              <th>personal</th>
-              <th>fecha registro</th>
-              <th>fecha resevacion</th>
+              <th>Socio</th>
+              <th>Tipo de Socio</th>
+              <th>Placa</th>
+              <th>Precio</th>
+              <th>Personal quien realizó el trabajo</th>
+              <th>Modelo</th>
+              <th>Año</th>
+              <th>Tipo de servicio</th>
+              <th>Fecha de registro</th>
+              <th>Fecha de reservación</th>
 
             </tr>
             <tr v-for="elemento in registros_final">
               <td>@{{elemento.socio}}</td>
               <td>@{{elemento.tiposocio}}</td>
               <td>@{{elemento.placa}}</td>
-              <td>@{{elemento.modelo+' '+elemento.anio}}</td>
               <td>@{{elemento.precio}}</td>
-              <td>@{{elemento.tiposervicio}}</td>
               <td>@{{elemento.personal}}</td>
-              <td>@{{elemento.fecharegistro | formato_fecha}}</td>
-              <td>@{{elemento.fechareservacion | formato_fecha}}</td>
+              <td>@{{elemento.modelo}}</td>
+              <td>@{{elemento.anio}}</td>
+              <td>@{{elemento.tiposervicio}}</td>
+              <td>@{{elemento.fecharegistro}}</td>
+              <td>@{{elemento.fechareservacion}}</td>
             </tr>
           </table>
         </div>

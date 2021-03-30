@@ -22,16 +22,19 @@ class DemoController extends Controller{
 		$datos['horarios'][]=array("id"=>6,"label"=>"15:00 pm");
 
 		$datos['estaciones']=array();
-		$datos['estaciones'][]=array("id"=>1,"label"=>"Este");
-		$datos['estaciones'][]=array("id"=>2,"label"=>"Oeste");
-		$datos['estaciones'][]=array("id"=>3,"label"=>"Norte");
-		$datos['estaciones'][]=array("id"=>4,"label"=>"Sur");
+		$datos['estaciones'][]=array("id"=>1,"label"=>"Norte");
+		$datos['estaciones'][]=array("id"=>2,"label"=>"Sur");
+		$datos['estaciones'][]=array("id"=>3,"label"=>"Este");
+		$datos['estaciones'][]=array("id"=>4,"label"=>"Oeste");
+
 
 		$datos['asignaciones']=array();
 		if($r->isMethod('post')){
 			$datos['asignaciones'][]=array("fila"=>1,"columna"=>1,"cliente"=>"Nicolas","tipo"=>"Normal");
-			$datos['asignaciones'][]=array("fila"=>2,"columna"=>2,"cliente"=>"Jorge","tipo"=>"Diamante");
+			$datos['asignaciones'][]=array("fila"=>2,"columna"=>2,"cliente"=>"Jorge","tipo"=>"Premium");
 			$datos['asignaciones'][]=array("fila"=>3,"columna"=>3,"cliente"=>"Paco","tipo"=>"VIP");
+			$datos['asignaciones'][]=array("fila"=>2,"columna"=>2,"cliente"=>"Jorge","tipo"=>"Ultra VIP");
+
 		}else{
 			$boservicio=new BoServicio();
 			$objeto=new \StdClass();
@@ -49,7 +52,7 @@ class DemoController extends Controller{
 		$objeto->fecha=$context['fecha'];
 		return response()->json($boservicio->obten_servicios($objeto));
 	}
-	public function prueba_insertar(Request $r){
+	public function insertar_datos(Request $r){
 		$context=$r->all();
 		$x=$this->prueba_bo($context);
 		return response()->json($x);
@@ -83,12 +86,12 @@ class DemoController extends Controller{
 	public function envio_email()
 	{
 		$datos= new \StdClass();
-		$datos->num_servicio='7777';
-		$datos->fecha_servicio='3 de Marzo';
-		$datos->cliente='Elias';
-		$datos->tipo_servicio='Vip';
+		$datos->num_servicio='2487';
+		$datos->fecha_servicio='09 de Marzo';
+		$datos->cliente='Carlos';
+		$datos->tipo_servicio='Premium';
 		$datos->total=200;
-		Mail::to('elias.marrufo@utmetropolitana.edu.mx')->send(new ConfirmacionServicio($datos));
+		Mail::to('delacruzc410@gmail.com')->send(new ConfirmacionServicio($datos));
 	}
 	
     
